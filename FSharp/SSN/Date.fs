@@ -71,7 +71,7 @@ let intToMonth x =
   | _ -> NoMonth
 
 /// <summary>
-/// Alias for a day
+/// Alias for a year
 /// </summary>
 type Year = int
 

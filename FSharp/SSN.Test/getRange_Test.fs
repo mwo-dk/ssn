@@ -34,7 +34,7 @@ let ``getRange' for n at end works``(c: CursorPair, x: NonEmptyString) =
 [<Fact>]
 [<Trait("Category", "Unit")>]
 let ``getRange' of empty string works``() = 
-  match getNonWhiteSpaceBoundary "" with
+  match getRange' 0 Unknown "" with
   | Unknown -> assertSuccess()
   | _ -> assertFail()
 

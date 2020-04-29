@@ -18,6 +18,6 @@ let ``integer characters are converted correctly``() =
 [<Property>]
 [<Trait("Category", "Unit")>]
 let ``toInt works``(x: char) =
-  let isInt = Char.IsDigit(x)
-  if isInt then (int(x) - zeroAsInt) = (toInt x)
-  else true
+  match Char.IsDigit(x) with
+  | true ->  (int(x) - zeroAsInt) = (toInt x)
+  | _ -> true
